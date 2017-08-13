@@ -1,0 +1,38 @@
+package simple;
+/****
+1.hashmap - complete map containing all the field name and length 
+2.Added in the format "FieldName"+"Length"
+3.Retreive the values by using .split("=")
+*//////////
+import java.io.*;
+import java.util.*;
+public class jana{
+public static LinkedHashMap hashmap =new LinkedHashMap();
+ //LinkedHashMap hashmap=new LinkedHashMap();
+public static LinkedHashMap setValues(){ 
+ LinkedHashMap hashmap1=null;
+ LinkedHashMap hashmap2=null;
+ LinkedHashMap hashmap3=null;
+ArrayList list=null;
+#foreach($first in $map.entrySet())
+hashmap1=new LinkedHashMap();
+#foreach($second in $first.value.entrySet())
+ hashmap2=new LinkedHashMap();
+#foreach($third in $second.value.entrySet())
+ hashmap3=new LinkedHashMap();
+#foreach($list in $third.value.entrySet())
+list=new ArrayList();
+#foreach($value in $list.value)
+list.add("$value");
+#end
+hashmap3.put("$list.key",list);
+#end
+hashmap2.put("$third.key",hashmap3);
+#end
+hashmap1.put("$second.key",hashmap2);
+#end
+hashmap.put("$first.key",hashmap1);
+#end
+return hashmap;
+}
+}
