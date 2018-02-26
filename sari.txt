@@ -1,0 +1,427 @@
+htService ________________________________________________________________________________________________
+ htService HAshMAP : : :: {statements=[{searchAccGroup={searchAccGroupInput=[Ljava.lang.String;@591905e0}, modifyGroup={modifyGroupInput=[Ljava.lang.String;@79d0e2d2}, deleteGroup=
+{deleteGroupInput=[Ljava.lang.String;@db8779}, searchGroup={searchGroupInput=[Ljava.lang.String;@4c9b195f}, addGroup={addGroupInput=[Ljava.lang.String;@5a9ed343}}, {searchAccGroup=
+{searchAccGroupOutput=[Ljava.lang.String;@7140022f}, modifyGroup={modifyGroupOutput=[Ljava.lang.String;@214f95bf}, deleteGroup={deleteGroupOutput=[Ljava.lang.String;@6ff03fae}, sea
+rchGroup={searchGroupOutput=[Ljava.lang.String;@5e4f1ec}, addGroup={addGroupOutput=[Ljava.lang.String;@79c6bff9}}, {searchAccGroup={SearchAccGroupInput=[{name=userIdentifier, prope
+rties={default=, description=Unique identifier assigned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=accountIdentifier, properties={
+default=, description=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the a
+ccount, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}]}, modifyGroup={accountListBlock=[{name=accountIdentifier, properties={default=, descrip
+tion=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs
+=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient within the account. Used to determi
+ne whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add group
+If it is  modify group then the allowed values are
+A- Add group
+D- Delete group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], ModifyGroupInput=[{name=userIdentifier, properties={default=, description=Unique identifier as
+signed to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group
+, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=true, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+U - Update group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group, including th
+e group's purpose, maxOccurs=1, length=200, mqtype=String, required=true, minOccurs=0}}, {name=introducingFirmIdentifier, properties={default=, description=Unique identifier for an
+ introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory, and bank custody). In the entity's hierarchy, the introducing firm is a
+level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-charac
+ter code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=clientIdentifier, properties={default=, desc
+ription=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOccurs=0}}, {name=groupPrimaryAccountIdentifier, properti
+es={default=, description=Account identifier (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}
+}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=accountList, m
+axOccurs=20, length=11, mqtype=x, required=false, minOccurs=0}, type=accountListBlock}]}, deleteGroup={DeleteGroupInput=[{name=userIdentifier, properties={default=, description=Uni
+que identifier assigned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-characte
+r code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=introducingFirmIdentifier, properties={default
+=, description=Unique identifier for an introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory, and bank custody). In the entity'
+s hierarchy, the introducing firm is a level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=groupIdentifier, prope
+rties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, descr
+iption=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}]}, searchGroup={SearchGroupInput=[{name=userIdentifier, properties={default=, descr
+iption=Unique identifier assigned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=searchKey, properties={default=, description=Search k
+eywords, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=pagingDirectionCode, properties={default=, description=Indicates the next group o
+f records to return in the response
+Allowed Values:
+F - Next group of records
+B - Previous group of records, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=pagingGroupIdentifier, properties={default=, description=Group identifier
+for the last group returned in the response, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=AccountPagingDirectionCode, properties={default=, descripti
+on=Next group of records to return in the response
+Allowed Values:
+F - Next group of records
+B - Previous group of records, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=AccountPagingAccountIdentifier, properties={default=, description=Account
+identifier for the last account returned in the response, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}]}, addGroup={accountListBlock=[{name=accountIdentifie
+r, properties={default=, description=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers
+ identify the account, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient wit
+hin the account. Used to determine whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add group
+If it is  modify group then the allowed values are
+A- Add group
+D- Delete group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], AddGroupInput=[{name=userIdentifier, properties={default=, description=Unique identifier assig
+ned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=groupPrimaryAccountIdentifier, properties={default=, description=Account identifi
+er (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupDescription, properties={def
+ault=, description=Description of a group, including the group's purpose, maxOccurs=1, length=200, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={def
+ault=, description=Three-character code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=introducingFi
+rmIdentifier, properties={default=, description=Unique identifier for an introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory,
+and bank custody). In the entity's hierarchy, the introducing firm is a level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=
+0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOc
+curs=0}}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=Repeating Reco
+rds of accounts, maxOccurs=20, length=11, mqtype=x, required=false, minOccurs=0}, type=accountListBlock}]}}, {searchAccGroup={SearchAccGroupOutput=[{name=groupProcessReturnCode, pr
+operties={default=, description=Code that indicates the outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document o
+n the Documentation page, maxOccurs=1, length=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outc
+ome of the request, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=returnCount, properties={default=, description=Number of records returned in the re
+quest, maxOccurs=1, length=9, mqtype=String, required=false, minOccurs=0}}, {name=groupAdminList, properties={default=, description=groupAdminList, maxOccurs=20, length=232, mqtype
+=x, required=false, minOccurs=0}, type=groupAdminListBlock}], groupAdminListBlock=[{name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs
+=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group, including the group's purpose, maxOcc
+urs=1, length=200, mqtype=String, required=false, minOccurs=0}}]}, modifyGroup={accountListModifyBlock=[{name=accountIdentifier, properties={default=, description=Account identifie
+r (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs=1, length=9, mqtype=S
+tring, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient within the account. Used to determine whether account doc
+uments should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=enterpriseId, properties={mqreserved=true, default=, maxOccurs=1, length=12, mqtype=Reserved, required=false, fixed=, minOccurs=0}}, {name=processActionCode, p
+roperties={default=, description=Action to perform
+Allowed Value:
+A - Add account
+D - Delete account, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcom
+e of the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000
+000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}], ModifyGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that indicates th
+e outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, length=2, mqtyp
+e=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=200, mqtype=St
+ring, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, required=false,
+minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome of the submitted request for an individual account within the group. Fo
+r descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=false, minOccurs=0}}
+, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=accountList, maxOccurs=20, length=3
+2, mqtype=x, required=false, minOccurs=0}, type=accountListModifyBlock}]}, deleteGroup={DeleteGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that
+ indicates the outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, le
+ngth=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=2
+00, mqtype=String, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, req
+uired=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+ user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+D - Delete group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome
+ of the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=0000000
+00, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}]}, searchGroup={accountListSearchBlock=[{name=accountIdentifier, properties={default=, description=Account i
+dentifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs=1, length=32,
+ mqtype=String, required=true, minOccurs=0}}, {name=accountShortName, properties={default=, description=Alternative name for an account. Not required to be unique. Default value is
+ the last name of an individual or the first part of a corporation name, maxOccurs=1, length=10, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properti
+es={default=, description=Role of the recipient within the account. Used to determine whether account documents should be sent to the address on record for the account, or to a dif
+ferent address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}], SearchGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that indicates the outcome of the submitted request for the overall group. F
+or descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, length=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage
+, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=returnCount, pro
+perties={default=, description=Number of records returned in the response. Up to 10 records are returned, maxOccurs=1, length=9, mqtype=String, required=false, minOccurs=0}}, {name
+=groupAdminList, properties={default=, maxOccurs=20, length=269, mqtype=x, required=false, minOccurs=0}, type=groupAdminSearchListBlock}, {name=numberofAccountsinGroup, properties=
+{default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountList, properties={default=, maxOccurs=50, length=43, mqtype
+=x, required=false, minOccurs=0}, type=accountListSearchBlock}, {name=additionalAccountProcessingIndicator, properties={default=, description=A maximum of 10 records are returned i
+n the response. This field indicates whether there are additional matching records that have not yet been returned. You can re-submit the request to get the next 10 matching record
+s
+Allowed Values:
+Y - Yes
+N - No, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], groupAdminSearchListBlock=[{name=groupIdentifier, properties={default=, description=Unique identifier f
+or a group, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group,
+including the group's purpose, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=additionalAccountProcessingIndicator, properties={default=, description=
+A maximum of 10 records are returned in the response. This field indicates whether there are additional matching records that have not yet been returned. You can re-submit the requ
+est to get the next 10 matching records
+Allowed Values:
+Y - Yes
+N - No, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by
+your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOccurs=0}}]}, addGroup={AddGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code th
+at indicates the outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1,
+length=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length
+=200, mqtype=String, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, r
+equired=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S- SelectLink group
+M- Combined mail group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add account, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group, including th
+e group's purpose, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=updateUserIdentifier, properties={default=, description=User identifier of the user
+who last updated the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-character code that i
+dentifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=false, minOccurs=0}}, {name=billingGroupIndicator, properties={mqreserved=true, defaul
+t=, description=Billing Group Indicator is a Yes or No indicator that tells if this group is being used for the purposes of billing  to a client, maxOccurs=1, length=1, mqtype=Rese
+rved, required=false, fixed=, minOccurs=0}}, {name=clientGroupIndicator, properties={mqreserved=true, default=, description=Client Group Indicator is a Yes or No indicator that tel
+ls if a group can be used for the Purpose of grouping a client, maxOccurs=1, length=1, mqtype=Reserved, required=false, fixed=, minOccurs=0}}, {name=groupPrimaryAccountIdentifier,
+properties={default=, description=Account identifier (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minO
+ccurs=0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false,
+ minOccurs=0}}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=Repeating Reco
+rds of accounts, maxOccurs=20, length=32, mqtype=x, required=false, minOccurs=0}, type=accountListResBlock}], accountListResBlock=[{name=accountIdentifier, properties={default=, de
+scription=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxO
+ccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient within the account. Used to de
+termine whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=enterpriseIdentifier, properties={default=, description=System-generated unique identifier for a transaction, maxOccurs=1, length=12, mqtype=String, required=f
+alse, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add account, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome o
+f the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000000
+, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}]}}, {repVersion=1}]}
+htOpIn ________________________________________________________________________________________________
+ htOpIn Vector : : :: {searchAccGroup={searchAccGroupInput=[Ljava.lang.String;@591905e0}, modifyGroup={modifyGroupInput=[Ljava.lang.String;@79d0e2d2}, deleteGroup={deleteGroupInput
+=[Ljava.lang.String;@db8779}, searchGroup={searchGroupInput=[Ljava.lang.String;@4c9b195f}, addGroup={addGroupInput=[Ljava.lang.String;@5a9ed343}}
+htOpOut ________________________________________________________________________________________________
+ htOpOut Vector : : :: {searchAccGroup={searchAccGroupOutput=[Ljava.lang.String;@7140022f}, modifyGroup={modifyGroupOutput=[Ljava.lang.String;@214f95bf}, deleteGroup={deleteGroupOu
+tput=[Ljava.lang.String;@6ff03fae}, searchGroup={searchGroupOutput=[Ljava.lang.String;@5e4f1ec}, addGroup={addGroupOutput=[Ljava.lang.String;@79c6bff9}}
+htValTypeIn ________________________________________________________________________________________________
+ htValTypeIn Vector : : :: {searchAccGroup={SearchAccGroupInput=[{name=userIdentifier, properties={default=, description=Unique identifier assigned to a NetX360 user, maxOccurs=1,
+length=8, mqtype=String, required=true, minOccurs=0}}, {name=accountIdentifier, properties={default=, description=Account identifier (also known as account number). The first 3 cha
+racters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=groupS
+ourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}]}, modifyGroup={accountListBlock=[{name=accountIdentifier, properties={default=, descrip
+tion=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs
+=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient within the account. Used to determi
+ne whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add group
+If it is  modify group then the allowed values are
+A- Add group
+D- Delete group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], ModifyGroupInput=[{name=userIdentifier, properties={default=, description=Unique identifier as
+signed to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group
+, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=true, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+U - Update group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group, including th
+e group's purpose, maxOccurs=1, length=200, mqtype=String, required=true, minOccurs=0}}, {name=introducingFirmIdentifier, properties={default=, description=Unique identifier for an
+ introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory, and bank custody). In the entity's hierarchy, the introducing firm is a
+level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-charac
+ter code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=clientIdentifier, properties={default=, desc
+ription=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOccurs=0}}, {name=groupPrimaryAccountIdentifier, properti
+es={default=, description=Account identifier (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}
+}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=accountList, m
+axOccurs=20, length=11, mqtype=x, required=false, minOccurs=0}, type=accountListBlock}]}, deleteGroup={DeleteGroupInput=[{name=userIdentifier, properties={default=, description=Uni
+que identifier assigned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-characte
+r code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=introducingFirmIdentifier, properties={default
+=, description=Unique identifier for an introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory, and bank custody). In the entity'
+s hierarchy, the introducing firm is a level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=groupIdentifier, prope
+rties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, descr
+iption=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}]}, searchGroup={SearchGroupInput=[{name=userIdentifier, properties={default=, descr
+iption=Unique identifier assigned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=searchKey, properties={default=, description=Search k
+eywords, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=pagingDirectionCode, properties={default=, description=Indicates the next group o
+f records to return in the response
+Allowed Values:
+F - Next group of records
+B - Previous group of records, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=pagingGroupIdentifier, properties={default=, description=Group identifier
+for the last group returned in the response, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=AccountPagingDirectionCode, properties={default=, descripti
+on=Next group of records to return in the response
+Allowed Values:
+F - Next group of records
+B - Previous group of records, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=AccountPagingAccountIdentifier, properties={default=, description=Account
+identifier for the last account returned in the response, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}]}, addGroup={accountListBlock=[{name=accountIdentifie
+r, properties={default=, description=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers
+ identify the account, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient wit
+hin the account. Used to determine whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add group
+If it is  modify group then the allowed values are
+A- Add group
+D- Delete group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], AddGroupInput=[{name=userIdentifier, properties={default=, description=Unique identifier assig
+ned to a NetX360 user, maxOccurs=1, length=8, mqtype=String, required=true, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=groupPrimaryAccountIdentifier, properties={default=, description=Account identifi
+er (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minOccurs=0}}, {name=groupDescription, properties={def
+ault=, description=Description of a group, including the group's purpose, maxOccurs=1, length=200, mqtype=String, required=true, minOccurs=0}}, {name=firmReference, properties={def
+ault=, description=Three-character code that identifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=true, minOccurs=0}}, {name=introducingFi
+rmIdentifier, properties={default=, description=Unique identifier for an introducing firm, which represents an entity with multiple lines of business (such as brokerage, advisory,
+and bank custody). In the entity's hierarchy, the introducing firm is a level above the firm (firmIdentifier field), maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=
+0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOc
+curs=0}}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=Repeating Reco
+rds of accounts, maxOccurs=20, length=11, mqtype=x, required=false, minOccurs=0}, type=accountListBlock}]}}
+htValTypeOut ________________________________________________________________________________________________
+ htValTypeOut Vector : : :: {searchAccGroup={SearchAccGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that indicates the outcome of the submitted
+request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, length=2, mqtype=String, required=false, m
+inOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=200, mqtype=String, required=false, minOc
+curs=0}}, {name=returnCount, properties={default=, description=Number of records returned in the request, maxOccurs=1, length=9, mqtype=String, required=false, minOccurs=0}}, {name
+=groupAdminList, properties={default=, description=groupAdminList, maxOccurs=20, length=232, mqtype=x, required=false, minOccurs=0}, type=groupAdminListBlock}], groupAdminListBlock
+=[{name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupDescripti
+on, properties={default=, description=Description of a group, including the group's purpose, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}]}, modifyGroup={a
+ccountListModifyBlock=[{name=accountIdentifier, properties={default=, description=Account identifier (also known as account number). The first 3 characters identify the office that
+ services the account, and the last 6 numbers identify the account, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={de
+fault=, description=Role of the recipient within the account. Used to determine whether account documents should be sent to the address on record for the account, or to a different
+ address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=enterpriseId, properties={mqreserved=true, default=, maxOccurs=1, length=12, mqtype=Reserved, required=false, fixed=, minOccurs=0}}, {name=processActionCode, p
+roperties={default=, description=Action to perform
+Allowed Value:
+A - Add account
+D - Delete account, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcom
+e of the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000
+000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}], ModifyGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that indicates th
+e outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, length=2, mqtyp
+e=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=200, mqtype=St
+ring, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, required=false,
+minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome of the submitted request for an individual account within the group. Fo
+r descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=false, minOccurs=0}}
+, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, maxOccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=accountList, maxOccurs=20, length=3
+2, mqtype=x, required=false, minOccurs=0}, type=accountListModifyBlock}]}, deleteGroup={DeleteGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that
+ indicates the outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, le
+ngth=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=2
+00, mqtype=String, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, req
+uired=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+ user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+D - Delete group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome
+ of the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=0000000
+00, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}]}, searchGroup={accountListSearchBlock=[{name=accountIdentifier, properties={default=, description=Account i
+dentifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxOccurs=1, length=32,
+ mqtype=String, required=true, minOccurs=0}}, {name=accountShortName, properties={default=, description=Alternative name for an account. Not required to be unique. Default value is
+ the last name of an individual or the first part of a corporation name, maxOccurs=1, length=10, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properti
+es={default=, description=Role of the recipient within the account. Used to determine whether account documents should be sent to the address on record for the account, or to a dif
+ferent address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}], SearchGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code that indicates the outcome of the submitted request for the overall group. F
+or descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1, length=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage
+, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=returnCount, pro
+perties={default=, description=Number of records returned in the response. Up to 10 records are returned, maxOccurs=1, length=9, mqtype=String, required=false, minOccurs=0}}, {name
+=groupAdminList, properties={default=, maxOccurs=20, length=269, mqtype=x, required=false, minOccurs=0}, type=groupAdminSearchListBlock}, {name=numberofAccountsinGroup, properties=
+{default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountList, properties={default=, maxOccurs=50, length=43, mqtype
+=x, required=false, minOccurs=0}, type=accountListSearchBlock}, {name=additionalAccountProcessingIndicator, properties={default=, description=A maximum of 10 records are returned i
+n the response. This field indicates whether there are additional matching records that have not yet been returned. You can re-submit the request to get the next 10 matching record
+s
+Allowed Values:
+Y - Yes
+N - No, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}], groupAdminSearchListBlock=[{name=groupIdentifier, properties={default=, description=Unique identifier f
+or a group, maxOccurs=1, length=32, mqtype=String, required=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S - SelectLink group
+M - Combined mail group, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group,
+including the group's purpose, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=additionalAccountProcessingIndicator, properties={default=, description=
+A maximum of 10 records are returned in the response. This field indicates whether there are additional matching records that have not yet been returned. You can re-submit the requ
+est to get the next 10 matching records
+Allowed Values:
+Y - Yes
+N - No, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by
+your firm, maxOccurs=1, length=20, mqtype=String, required=false, minOccurs=0}}]}, addGroup={AddGroupOutput=[{name=groupProcessReturnCode, properties={default=, description=Code th
+at indicates the outcome of the submitted request for the overall group. For descriptions of return codes, see the Getting Started document on the Documentation page, maxOccurs=1,
+length=2, mqtype=String, required=false, minOccurs=0}}, {name=errorMessage, properties={default=, description=Message that describes the outcome of the request, maxOccurs=1, length
+=200, mqtype=String, required=false, minOccurs=0}}, {name=groupIdentifier, properties={default=, description=Unique identifier for a group, maxOccurs=1, length=32, mqtype=String, r
+equired=false, minOccurs=0}}, {name=groupSourceCode, properties={default=, description=Type of group
+Allowed Values:
+S- SelectLink group
+M- Combined mail group, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=createByUserIdentifier, properties={default=, description=User identifier of the
+user who created the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add account, maxOccurs=1, length=1, mqtype=String, required=false, minOccurs=0}}, {name=groupDescription, properties={default=, description=Description of a group, including th
+e group's purpose, maxOccurs=1, length=200, mqtype=String, required=false, minOccurs=0}}, {name=updateUserIdentifier, properties={default=, description=User identifier of the user
+who last updated the group, maxOccurs=1, length=15, mqtype=String, required=false, minOccurs=0}}, {name=firmReference, properties={default=, description=Three-character code that i
+dentifies a firm (formerly known as IBD code), maxOccurs=1, length=3, mqtype=String, required=false, minOccurs=0}}, {name=billingGroupIndicator, properties={mqreserved=true, defaul
+t=, description=Billing Group Indicator is a Yes or No indicator that tells if this group is being used for the purposes of billing  to a client, maxOccurs=1, length=1, mqtype=Rese
+rved, required=false, fixed=, minOccurs=0}}, {name=clientGroupIndicator, properties={mqreserved=true, default=, description=Client Group Indicator is a Yes or No indicator that tel
+ls if a group can be used for the Purpose of grouping a client, maxOccurs=1, length=1, mqtype=Reserved, required=false, fixed=, minOccurs=0}}, {name=groupPrimaryAccountIdentifier,
+properties={default=, description=Account identifier (also known as account number) for the primary account in the group, maxOccurs=1, length=32, mqtype=String, required=true, minO
+ccurs=0}}, {name=clientIdentifier, properties={default=, description=Unique identifier for a client as assigned by your firm, maxOccurs=1, length=20, mqtype=String, required=false,
+ minOccurs=0}}, {name=numberofAccountsinGroup, properties={default=, description=Number of accounts to be included in the group
+Allowed Values:
+Integer up to 100, mqformat=000000000, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}, {name=accountListBlock, properties={default=, description=Repeating Reco
+rds of accounts, maxOccurs=20, length=32, mqtype=x, required=false, minOccurs=0}, type=accountListResBlock}], accountListResBlock=[{name=accountIdentifier, properties={default=, de
+scription=Account identifier (also known as account number). The first 3 characters identify the office that services the account, and the last 6 numbers identify the account, maxO
+ccurs=1, length=9, mqtype=String, required=true, minOccurs=0}}, {name=statementRecipientType, properties={default=, description=Role of the recipient within the account. Used to de
+termine whether account documents should be sent to the address on record for the account, or to a different address
+Allowed Values:
+A - Account holder. Send documents to the address on record for the account
+P - Additional participant or interested party. Send documents to the additional participant's or interested party's address, maxOccurs=1, length=1, mqtype=String, required=false,
+minOccurs=0}}, {name=enterpriseIdentifier, properties={default=, description=System-generated unique identifier for a transaction, maxOccurs=1, length=12, mqtype=String, required=f
+alse, minOccurs=0}}, {name=processActionCode, properties={default=, description=Action to perform
+Allowed Value:
+A - Add account, maxOccurs=1, length=1, mqtype=String, required=true, minOccurs=0}}, {name=processingReturnCode, properties={default=, description=Code that indicates the outcome o
+f the submitted request for an individual account within the group. For descriptions of return codes, see the Getting Started document on the Documentation page, mqformat=000000000
+, maxOccurs=1, length=9, mqtype=Integer, required=true, minOccurs=0}}]}}
+htOpDesc ________________________________________________________________________________________________
+ htOpDesc Vector : : :: {repVersion=1}
+htOpDesc ______________________________
+
+
+
+  java.util.Enumeration enmService = htService.keys();
+ 
+   while (enmService.hasMoreElements()){
+      serviceName = (String)enmService.nextElement();
+      serviceVersion = "";
+      java.util.Vector vTemp = (java.util.Vector)htService.get(serviceName);
+      if (vTemp.size() == 5) {
+         htOpIn = (Hashtable)vTemp.get(0);
+         htOpOut = (Hashtable)vTemp.get(1);
+         htValTypeIn = (Hashtable)vTemp.get(2);
+         htValTypeOut = (Hashtable)vTemp.get(3);
+         htOpDesc = (Hashtable)vTemp.get(4);
+      }
+       private Hashtable htOpIn, htOpOut, htValTypeIn, htValTypeOut, htOpDesc, htService;
