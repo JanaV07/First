@@ -1,0 +1,70 @@
+package practice_new;
+
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.Scanner;
+
+public class KP {
+
+	public static void main(String[] args) {
+		
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int m=s.nextInt();
+		//System.out.println(n +"...."+m);
+		
+		char a[][]=new char[n][m];
+		String str="";
+		for (int i=0;i<n;i++) {
+			str=s.next();
+			for(int j=0;j<m;j++) {
+				a[i][j]=str.charAt(j);
+				//System.out.print(a[i][j]);
+			}
+		}
+		int count =0,max=0;
+				Boolean found=false;
+				int k,l;
+		for(int i=0;i<n;i++) {
+			count=0;
+			for(int j=0;j<m;j++) {
+				//System.out.println(i);
+				k=i;
+				l=j;
+				if(a[i][j]=='.')
+				{
+					count =1;
+					k=i+1;
+					
+					while(k<n && a[k][j]=='.') {
+						count++;
+						k++;
+					}
+					if(k>=n)
+						k--;
+					//System.out.println(k);
+					
+					l=j+1;
+					//System.out.println(l);
+					while(l<m && a[k][l]=='.') {
+						count++;	
+						l++;
+						found=true;
+					}
+				}
+				if(found && count>max) {
+					//System.out.println("max::"+max);
+					max=count;
+				}
+			}
+			
+		}
+		if(max!=0) {
+		System.out.println("YES");
+		System.out.println(max);
+		}
+		else
+			System.out.println("NO");
+		
+	}
+}
